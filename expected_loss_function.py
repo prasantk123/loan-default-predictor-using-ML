@@ -68,9 +68,13 @@ def calculate_expected_loss(credit_lines_outstanding, loan_amt_outstanding, tota
     debt_to_income = total_debt_outstanding / income
     loan_to_income = loan_amt_outstanding / income
     
-    # Prepare input data
-    loan_data = np.array([[credit_lines_outstanding, loan_amt_outstanding, total_debt_outstanding,
-                          income, years_employed, fico_score, debt_to_income, loan_to_income]])
+    # Prepare input data with feature names
+    feature_names = ['credit_lines_outstanding', 'loan_amt_outstanding', 'total_debt_outstanding', 
+                    'income', 'years_employed', 'fico_score', 'debt_to_income', 'loan_to_income']
+    
+    loan_data = pd.DataFrame([[credit_lines_outstanding, loan_amt_outstanding, total_debt_outstanding,
+                              income, years_employed, fico_score, debt_to_income, loan_to_income]], 
+                             columns=feature_names)
     
     # Predict probability of default
     prob_default = model.predict_proba(loan_data)[0, 1]

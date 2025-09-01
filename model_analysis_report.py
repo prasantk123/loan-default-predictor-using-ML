@@ -1,13 +1,11 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report, roc_auc_score, roc_curve
+from sklearn.metrics import classification_report, roc_auc_score
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -18,7 +16,7 @@ def comprehensive_analysis():
     print("LOAN DEFAULT PREDICTION MODEL ANALYSIS")
     print("=" * 60)
     
-    data = pd.read_csv('Task 3 and 4_Loan_Data.csv')
+    data = pd.read_csv('loan_data_created.csv')
     
     # Data overview
     print(f"\nDataset Overview:")

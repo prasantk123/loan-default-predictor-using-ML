@@ -5,7 +5,7 @@ import joblib
 def train_and_save_model():
     """Train the model and save it for production use"""
     # Load data
-    data = pd.read_csv('Task 3 and 4_Loan_Data.csv')
+    data = pd.read_csv('loan_data_created.csv')
     
     # Feature engineering
     data['debt_to_income'] = data['total_debt_outstanding'] / data['income']

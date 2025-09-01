@@ -34,7 +34,7 @@ Based on analysis of 10,000 loan records with 18.51% default rate:
 - `model_analysis_report.py` - Comprehensive analysis and model comparison
 
 ### Data
-- `Task 3 and 4_Loan_Data.csv` - Training dataset with borrower characteristics and default outcomes
+- `loan_data_created.csv` - Training dataset with borrower characteristics and default outcomes
 
 ## Usage
 

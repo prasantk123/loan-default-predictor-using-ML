@@ -1,11 +1,10 @@
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report, roc_auc_score, confusion_matrix
+from sklearn.metrics import roc_auc_score
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -139,7 +138,7 @@ def main():
     
     # Load and prepare data
     print("Loading and preparing data...")
-    X, y = predictor.load_and_prepare_data('Task 3 and 4_Loan_Data.csv')
+    X, y = predictor.load_and_prepare_data('loan_data_created.csv')
     
     print(f"Dataset shape: {X.shape}")
     print(f"Default rate: {y.mean():.2%}")
